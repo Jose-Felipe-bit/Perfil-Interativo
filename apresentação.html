@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="pt-BR"> 
+<head>
+  <meta charset="UTF-8" /> 
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/> 
+  <title>Perfil Interativo — Apresentação</title> 
+
+  <!-- Ícones da biblioteca Font Awesome (para os botões e links) -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" crossorigin="anonymous" />
+
+  <!-- Importa o arquivo CSS principal -->
+  <link rel="stylesheet" href="apresentação.css">
+</head>
+
+<body>
+  <!-- Camada de efeitos de luz e brilho sobre o fundo (controlada via CSS) -->
+  <div class="bg-overlay"></div>
+
+  <!-- Canvas usado para efeitos animados (energia, partículas, etc.) -->
+  <canvas id="energyCanvas"></canvas>
+
+  <!-- === CARTÃO DE PERFIL === -->
+  <div class="profile-card" id="profileCard">
+      
+      <!-- FOTO DE PERFIL -->
+      <img src="Minha foto.jpg" alt="Sua Foto" id="profilePhoto">
+
+      <!-- MEU NOME -->
+      <h2 id="profileName">
+          <!-- Texto principal do nome -->
+          <span id="nameText">José Felipe</span>
+          <!-- Faixa de brilho que passa sobre o nome (efeito CSS) -->
+          <span class="name-sweep"></span>
+      </h2>
+      
+      <!-- DESCRIÇÃO DO PERFIL -->
+      <p id="profileDesc">
+          Hello, World! Eu me chamo José Felipe, estou cursando <b>Engenharia de Software</b> na <b>Estácio</b>.
+          Amo tecnologia e por entender como as soluções digitais podem transformar o dia. Este é o meu primeiro 
+          programa simples em HTML, CSS e JavaScipt😊.
+      </p>
+
+      <!-- LINKS PARA REDES SOCIAIS -->
+      <div class="links" id="social-links">
+          <!-- Ícone do GitHub -->
+          <a href="https://github.com/Jose-Felipe-bit" class="github" target="_blank" title="GitHub">
+              <i class="fab fa-github"></i>
+          </a>
+          <!-- Ícone do Instagram -->
+          <a href="https://www.instagram.com/jose_garcia26148/#" class="instagram" target="_blank" title="Instagram">
+              <i class="fab fa-instagram"></i>
+          </a>
+          <!-- Ícone do LinkedIn -->
+          <a href="https://www.linkedin.com/in/jos%C3%A9-felipe-48a792381/?lipi=urn%3Ali%3Apage%3Ad_flagship3_job_home%3B%2FUcg4RjtQv2kCipLFnnnlQ%3D%3D" class="linkedin" target="_blank" title="LinkedIn">
+              <i class="fab fa-linkedin"></i>
+          </a>
+      </div>
+
+      <!-- === CONTROLES INTERATIVOS === -->
+      <div class="controls">
+          <!-- Botão que mostra ou esconde a descrição -->
+          <button class="control-btn" id="infoBtn" title="Mostrar descrição">
+              <i class="fas fa-info"></i> <!-- Ícone de informação -->
+          </button>
+
+          <!-- Botão que mostra ou esconde os links -->
+          <button class="control-btn" id="presentBtn" title="Mostrar links">
+              <i class="fas fa-bolt"></i> <!-- Ícone de raio -->
+          </button>
+
+          <!-- CONTROLE DE TAMANHO DO CARTÃO -->
+          <div style="display:flex; align-items:center; gap:6px; margin-left:10px;">
+              <!-- Rótulo e campo para alterar a largura -->
+              <label style="font-weight:bold;">L:</label>
+              <input id="inputWidth" type="number" min="150" max="800" value="350">
+
+              <!-- Rótulo e campo para alterar a altura -->
+              <label style="font-weight:bold;">A:</label>
+              <input id="inputHeight" type="number" min="150" max="800" value="350">
+
+              <!-- Botão que aplica as novas dimensões -->
+              <button id="applySizeBtn">Atualizar</button>
+          </div>
+      </div>
+
+      <!-- Texto informativo abaixo dos botões -->
+      <div class="small-note">Clique nos ícones para mostrar descrição ou links</div>
+  </div>
+
+  <!-- Importa o arquivo JavaScript (interações e animações dinâmicas) -->
+  <script src="apresentação.js"></script>
+</body>
+</html>
